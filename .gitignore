@@ -1,7 +1,0 @@
-.gradle/
-build/
-run/
-client-run/
-logs/
-.idea/
-*.iml

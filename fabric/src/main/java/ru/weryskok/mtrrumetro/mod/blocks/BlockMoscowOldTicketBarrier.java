@@ -76,8 +76,9 @@ public class BlockMoscowOldTicketBarrier extends BlockTicketBarrier {
 
 	@Override
 	public void scheduledTick2(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-		world.setBlockState(pos, state.with(new Property<>(OPEN.data), TicketSystem.EnumTicketBarrierOpen.CLOSED));
-		world.setBlockState(pos, state.with(new Property<>(NORMAL_OPEN.data), EnumNormallyOpenedTicketBarrier.NEUTRAL));
+		world.setBlockState(pos, state
+				.with(new Property<>(OPEN.data), TicketSystem.EnumTicketBarrierOpen.CLOSED)
+				.with(new Property<>(NORMAL_OPEN.data), EnumNormallyOpenedTicketBarrier.NEUTRAL));
 	}
 
 	@Override
